@@ -1,0 +1,31 @@
+<form #ngform="ngForm" (submit)="submitForm(ngform)">
+  <p>id: <input name="id" ngModel /></p>
+  <p>name: <input name="name" ngModel /></p>
+  <button type="submit">Submit Button</button>
+</form>
+
+<p>
+  focusout Input:
+  <input #input name="age" ngModel (focusout)="onFocusout(input)" />
+</p>
+
+<p>
+  Blur Validasia:
+  <input #input name="age" ngModel (blur)="onBlur(input)" />
+</p>
+
+<p>
+  Input:
+  <input #input name="age" ngModel (change)="onChange(input)" />
+</p>
+
+<p>
+  Doqru Validasia Input:
+  <input
+    #input
+    name="age"
+    ngModel
+    (focusout)="onFocusout(input)"
+    (change)="onChange(input)"
+  />
+</p>
